@@ -1,0 +1,10 @@
+Package: TutorialGraficos
+Type: Package
+Title: Tutorial sobre Gráficos en R
+Version: 0.1.0
+Author: Yanina Bellini Saibene
+Maintainer: Yanina Bellini Saibene <yabellini@gmail.com>
+Description: Tutorial para generar gráficos en R festejando a Florence Nightingale
+License: CCBY-4.0
+Encoding: UTF-8
+LazyData: true
