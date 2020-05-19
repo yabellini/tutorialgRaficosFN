@@ -30,7 +30,7 @@ The objectives were:
 * learn how to generate a tutorial package developed in learnr
 * include in the tutorial a series of pedagogical tools described in the book [Teaching Tech Together](teachtogether.tech/)
 * that you could take advantage of the new Tutorial panel that comes in the [new version of RStudio](https://rstudio.com/products/rstudio/download/preview/).
-* to make a contribution to the celebration of Florence Nightingale (since I have not been able to participate in # 30diasdegraficos)
+* to make a contribution to the celebration of Florence Nightingale (since I have not been able to participate in #30diasdegraficos)
 
 To install the package you have to download the .tar or .zip file and install the `tutorialgRaficosFN` package from the option Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz). If you have the latest version of RStudio it will appear in your Tutorial panel.
 
