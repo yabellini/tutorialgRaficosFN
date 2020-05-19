@@ -36,4 +36,4 @@ To install the package you have to download the .tar or .zip file and install th
 
 If you don't have the latest version then you have to install the [learnr package](https://rstudio.github.io/learnr/index.html) and then run the Tutorial like this:
 
-learnr :: run_tutorial ("graphics", package = "tutorialgRaficosFN")
+`learnr::run_tutorial("graficos", package = "tutorialgRaficosFN")`
