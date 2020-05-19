@@ -23,7 +23,7 @@ Si no tenes la ultima versión entonces tenes que instalar el paquete [learnr](h
 
 Repository of the tutorial to generate graphics in R celebrating Florence Nightingale made with learnr
 
-This repo contains a tutorial generated with the learnr package that includes a concept map, two learner people, the license and then a series of explanations and exercises to make graphs in R.
+This repo contains a tutorial generated with the learnr package that includes a concept map, two learner personas, the license and then a series of explanations and exercises to make graphs in R.
 
 The objectives were:
 
