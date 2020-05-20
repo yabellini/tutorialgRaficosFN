@@ -154,7 +154,7 @@ Vamos a realizar otros gráficos utilizando los datos en `gapminder`.  Para util
 
 Ya hemos filtrado los datos necesarios en el dataset `Argentina` y está disponible en el entorno para que lo puedas utilizar. A continuación te mostramos los primeros registros de este dataset. 
 
-```{r}
+```{r Argentina}
 Argentina <- gapminder %>%
   filter(country == 'Argentina')
 
@@ -164,7 +164,7 @@ head(Argentina)
 
 Modifica el siguiente código para generar un gráfico que lineas que nos muestre los años en el eje x y la población en el eje y.
 
-```{r grafico_lineas, exercise=TRUE}
+```{r grafico_lineas, exercise=TRUE,  exercise.setup = "Argentina"}
 
 ggplot(data = ________, 
        mapping = aes(x = _______, y = ________))+
@@ -203,7 +203,7 @@ Vamos a transformar el gráfico anterior a barras.  ¿cómo realizarias este cam
 
 Modifica el siguiente código para generar un gráfico que barras que nos muestre los años en el eje x y la población en el eje y.
 
-```{r grafico_barras, exercise=TRUE}
+```{r grafico_barras, exercise=TRUE,  exercise.setup = "Argentina"}
 
 ggplot(data = Argentina, 
        mapping = aes(x = year, y = pop))+
