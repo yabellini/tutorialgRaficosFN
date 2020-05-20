@@ -13,11 +13,11 @@ Los objetivos fueron:
 * que pudiera aprovechar el neuvo panel de Tutorial que viene en la [nueva versión de RStudio](https://rstudio.com/products/rstudio/download/preview/).
 * que hiciera un aporte al festejo de Florence Nightingale (ya que no he podido participar del #30diasdegraficos)
 
-Para instalar el paquete tenes que descargarte el archivo .tar.gz o .zip e instalar el paquete `tutorialgRaficosFN` desde la opción Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz)  Si tenes la última versión de RStudio aparecerá en tu panel de Tutorial. 
+Para instalar el paquete tenés que descargarte el archivo .tar.gz o .zip e instalar el paquete `tutorialgRaficosFN` desde la opción Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz)  Si tenes la última versión de RStudio aparecerá en tu panel de Tutorial. 
 
-Si no tenes la ultima versión entonces tenes que instalar el paquete [learnr](https://rstudio.github.io/learnr/index.html) y luego ejecutar de esta manera el Tutorial:
+Si no tenes la ultima versión entonces tenés que instalar el paquete [learnr](https://rstudio.github.io/learnr/index.html) y luego ejecutar de esta manera el Tutorial:
 
-`learnr::run_tutorial("graficos", package = "tutorialgRaficosFN")`
+`learnr::run_tutorial("graficos", package = "TutorialgRaficosFN")`
 
 ## English
 
@@ -36,4 +36,4 @@ To install the package you have to download the .tar or .zip file and install th
 
 If you don't have the latest version then you have to install the [learnr package](https://rstudio.github.io/learnr/index.html) and then run the Tutorial like this:
 
-`learnr::run_tutorial("graficos", package = "tutorialgRaficosFN")`
+`learnr::run_tutorial("graficos", package = "TutorialgRaficosFN")`
