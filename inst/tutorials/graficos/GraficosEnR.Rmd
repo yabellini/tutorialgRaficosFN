@@ -4,6 +4,7 @@ output:
   learnr::tutorial:
     progressive: true
     allow_skip: true
+    css: css/miceeseese.css
 runtime: shiny_prerendered
 tutorial:
   version: 1.0
@@ -26,6 +27,10 @@ Argentina <- gapminder %>%
 
 
 ## Presentación 
+
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/30DiasDeGraficos2020.png")  
+```
 
 ### Mapa conceptual
 
@@ -53,12 +58,23 @@ graph LR;
 
 En este tutorial vamos a reparar como generar una serie de gráficos básicos con R utilizando el paquete `ggplot2`.  cuando generamos este tutorial pensamos en las siguientes personas:
 
+```{r, echo=FALSE, out.width="100%", fig.align = "center"}
+knitr::include_graphics("images/gentecompu.jpg")  
+```
+
+
+> [Photo by Brooke Cagle on Unsplash](https://unsplash.com/photos/C-v1p2DTakA)
+
 **Felicitas** está dando sus primeros pasos como investigadora. Debe hacer informes que incluyan estadísticas como parte de sus actividades. Usa Excel e InfoStat (un programa de estadísticas basado en menús) para registrar sus datos y realizar sus cálculos; y luego usa Word para escribir sus informes copiando y pegando desde los otros softwares. Ha visto gráficos e informes PDF generados en R por sus compañeras de trabajo. La estética de los gráficos y la posibilidad de automatizar algunos de sus informes hizo que se interese en aprender a usar R. No tiene mucho tiempo para ir a cursos formales, ya se instaló R y RStudio y quiere empezar a aprender por su cuenta hasta que pueda asisitir a algun meetup de R-Ladies en su ciudad, donde sus compañeras aprendieron a utilizar estas herramientas.
 
 **Sebastián** es un entusiasta del análisis de datos, está cursando el último año de su carrera de grado en economía y aunque en su disciplina se usan otros software, ha escuchado mucho sobre R ultimamente y ve que hay una gran movida comunitaria en la región especialmente en twitter.  Descubrió que hay desafíos semanales para aprender diferentes herramientas y justo este mes se hace uno de 30 días de gráficos.  Le parece una gran oportunidad para aprender, pero no sabe muy bien por donde empezar a aprender como graficar con R porque cuando busca en Internet aparecen códigos muy diferentes para el mismo tipo de gráfico.
 
 
 ### Licencia
+
+```{r, echo=FALSE, fig.align = "left"}
+knitr::include_graphics("images/CC_BY-SA_4.0.png")  
+```
 
 Este curso se comparte bajo la licencia [Creative Commons Attribution-ShareAlike 4.0 International License](https://creativecommons.org/licenses/by-sa/4.0/deed.es_ES) y fue realizado por [Yanina Bellini Saibene](https://yabellini.netlify.app/)
 
