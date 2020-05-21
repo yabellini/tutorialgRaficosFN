@@ -10,7 +10,8 @@ Los objetivos fueron:
 
 * aprender a generar un paquete de un tutorial desarrollado en learnr 
 * que el tutorial incluya una serie de herramientas pedagogicas descriptas en el libro [Teaching Tech Together](teachtogether.tech/)
-* que pudiera aprovechar el neuvo panel de Tutorial que viene en la [nueva versión de RStudio](https://rstudio.com/products/rstudio/download/preview/).
+* que pudiera aprovechar el nuevo panel de Tutorial que viene en la [nueva versión de RStudio](https://rstudio.com/products/rstudio/download/preview/).
+* aprender como cambiar los estilos del tutorial basado en [este post](https://education.rstudio.com/blog/2020/05/learnr-for-remote/)
 * que hiciera un aporte al festejo de Florence Nightingale (ya que no he podido participar del #30diasdegraficos)
 
 Para instalar el paquete tenés que descargarte el archivo .tar.gz o .zip (sólo funciona en Windows) e instalar el paquete `tutorialgRaficosFN` desde la opción Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz)  Si tenes la última versión de RStudio aparecerá en tu panel de Tutorial. 
@@ -30,6 +31,7 @@ The objectives were:
 * learn how to generate a tutorial package developed in learnr
 * include in the tutorial a series of pedagogical tools described in the book [Teaching Tech Together](teachtogether.tech/)
 * that you could take advantage of the new Tutorial panel that comes in the [new version of RStudio](https://rstudio.com/products/rstudio/download/preview/).
+* learn how to change the tutorial styles based on [this post](https://education.rstudio.com/blog/2020/05/learnr-for-remote/)
 * to make a contribution to the celebration of Florence Nightingale (since I have not been able to participate in #30diasdegraficos)
 
 To install the package you have to download the .tar.gz or .zip (only for Windows) file and install the `tutorialgRaficosFN` package from the option Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz). If you have the latest version of RStudio it will appear in your Tutorial panel.
