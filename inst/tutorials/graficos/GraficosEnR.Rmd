@@ -50,8 +50,10 @@ graph LR;
   B -->|compuesta por| I[Objetos Geométricos];
   F -->|combinan| J[capas]
   K[ggplot2] -->|implementa| B
-  
 ")
+
+# knitr::include_graphics("images/mapa_conceptual.png")  
+
 ```
 
 ### ¿Quién sos vos?
@@ -61,9 +63,8 @@ En este tutorial vamos a reparar como generar una serie de gráficos básicos co
 ```{r, echo=FALSE, out.width="100%", fig.align = "center"}
 knitr::include_graphics("images/gentecompu.jpg")  
 ```
-
-
 > [Photo by Brooke Cagle on Unsplash](https://unsplash.com/photos/C-v1p2DTakA)
+
 
 **Felicitas** está dando sus primeros pasos como investigadora. Debe hacer informes que incluyan estadísticas como parte de sus actividades. Usa Excel e InfoStat (un programa de estadísticas basado en menús) para registrar sus datos y realizar sus cálculos; y luego usa Word para escribir sus informes copiando y pegando desde los otros softwares. Ha visto gráficos e informes PDF generados en R por sus compañeras de trabajo. La estética de los gráficos y la posibilidad de automatizar algunos de sus informes hizo que se interese en aprender a usar R. No tiene mucho tiempo para ir a cursos formales, ya se instaló R y RStudio y quiere empezar a aprender por su cuenta hasta que pueda asisitir a algun meetup de R-Ladies en su ciudad, donde sus compañeras aprendieron a utilizar estas herramientas.
 
@@ -99,7 +100,7 @@ Específicamente, podemos *dividir un gráfico* en los siguientes *tres componen
 
 Vamos a ver un ejemplo de estos componentes en un gráfico, para ello vamos a utilizar el paquete `gapminder` que ya instalamos y cargamos por ti.
 
-Para ver los datos de `gapminder`, escribe `gapminder` en el bloque de código que aparece abajo y luego haz click en el botón _"Submit Answer"_ (enviar respuesta, en inglés).
+Para ver los datos de `gapminder`, escribe `gapminder` en el bloque de código que aparece abajo y luego haz click en el botón _"Run Code"_ (ejecutar código, en inglés).
 
 ```{r gapminder0, exercise = TRUE}
 
@@ -112,7 +113,7 @@ gapminder
 
 ### Mensaje
 
-Buen trabajo! Usaremos fragmentos de código interactivos como este en el tutorial. Siempre que encuentres uno, puedes hacer clic en _Submit Answer_ para ejecutar el código escrito. Si hay un botón _Hint_ o _Solución_, puedes hacer clic para recibir ayuda y/o ver la respuesta.
+Buen trabajo! Usaremos fragmentos de código interactivos como este en el tutorial. Siempre que encuentres uno, puedes hacer clic en _Run Code_ para ejecutar el código escrito. Si hay un botón _Hint_ o _Solución_, puedes hacer clic para recibir ayuda y/o ver la respuesta.
 
 ## A graficar
 
@@ -159,12 +160,17 @@ Bien hecho!, además del gráfico de puntos, indicado en el código anterior por
 
 ```{r quiz}
 quiz(
-  question("¿Cómo te parece que pueden llamarse las geometrías para los gráficos de lineas y de áreas?", correct = "Buen trabajo!, la palabra line siginifica linea en inglés y area significa área.", allow_retry = TRUE,
+  question("¿Cómo te parece que pueden llamarse las geometrías para los gráficos de lineas y de áreas?", 
+           correct = "Buen trabajo!, la palabra line siginifica linea en inglés y area significa área.", 
+           allow_retry = TRUE,
+           submit_button = "Enviar respuesta",
+           try_again_button = "Volver a intentar",
     answer("geom_line() y geom_bar()", message = "En general a la palabra geom_ se le agrega el nombre de la geometría en Inglés"),
     answer("geom_linea(), geom_sup()", message = "En general a la palabra geom_ se le agrega el nombre de la geometría en Inglés"),
     answer("geom_area(), geom_histogram()", message = "En general a la palabra geom_ se le agrega el nombre de la geometría en Inglés"),
     answer("geom_line(), geom_area()", correct = TRUE)
-  ), caption = "Gemetrás con ggplot2"
+  ), 
+  caption = "Gemetrías con ggplot2"
 )
 ```
 
@@ -191,7 +197,7 @@ ggplot(data = ________,
 ```
 
 ```{r grafico_lineas-hint}
-
+- El dataset se llama Argentina
 - La variable que contiene los años se llama year
 - La variable que contiene la población se llama pop
 
@@ -218,7 +224,7 @@ Hay dos formas de hacer un gráfico de barras en `ggplot2`, una forma es utiliza
 
 Vamos a transformar el gráfico anterior a barras.  ¿cómo realizarias este cambio?, ¿Cuál de las dos opciones de geometrías utilizarías?
 
-Modifica el siguiente código para generar un gráfico que barras que nos muestre los años en el eje x y la población en el eje y.
+Modifica el siguiente código para generar un gráfico de barras que nos muestre los años en el eje x y la población en el eje y.
 
 ```{r grafico_barras, exercise=TRUE}
 
@@ -247,6 +253,36 @@ ggplot(data = Argentina,
 
 Bien hecho!, utilizamos `geom_col()` porque ya contamos con una variable que tiene calculada la cantidad que queremos representar.
 
+### Hagamos un gráfico de área
+
+Vamos a transformar el gráfico anterior a áreas.
+
+Modifica el siguiente código para generar un gráfico de áreas que nos muestre los años en el eje x y la población en el eje y.
+
+```{r grafico_areas, exercise=TRUE}
+
+ggplot(data = Argentina, 
+       mapping = aes(x = year, y = pop))+
+    geom_______()
+
+
+```
+
+```{r grafico_areas-hint}
+
+Recuerda que el nombre de la geometría es la palabra en inglés, en linea es geom_line(), en barras es geom_bar(), para área es geom_ 
+```
+
+
+```{r grafico_areas-solution}
+
+ggplot(data = Argentina, 
+       mapping = aes(x = year, y = pop))+
+    geom_area()
+
+```
+
+
 ## Fuentes
 
 Esperamos que esta pequeña introducción a los gráficos en R te sea de utilidad.  A continuación te dejamos una serie de materiales que pueden resultar muy útiles para continuar aprendiendo y en los cuales basamos este tutorial.
@@ -256,7 +292,6 @@ Esperamos que esta pequeña introducción a los gráficos en R te sea de utilida
 - [RStudio primers en visualización de datos (en Inglés)](https://rstudio.cloud/learn/primers)
 
 - [Capítulo de Visualización de A ModernDive into R and the tidyverse. Chester Ismay and Albert Y. Kim, Foreword by Kelly S. McConville. November 25, 2019 (en Inglés)](https://moderndive.com/2-viz.html)
-## Fuentes
 
 - [The R Graph Gallery](https://www.r-graph-gallery.com/)
 
