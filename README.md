@@ -14,7 +14,11 @@ Los objetivos fueron:
 * aprender como cambiar los estilos del tutorial basado en [este post](https://education.rstudio.com/blog/2020/05/learnr-for-remote/)
 * que hiciera un aporte al festejo de Florence Nightingale (ya que no he podido participar del #30diasdegraficos)
 
-Para instalar el paquete tenés que descargarte el archivo .tar.gz o .zip (sólo funciona en Windows) e instalar el paquete `tutorialgRaficosFN` desde la opción Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz)  Si tenes la última versión de RStudio aparecerá en tu panel de Tutorial. 
+Para instalar la versión de desarrollo desde GitHub, usá:
+
+# install.packages("remotes")
+remotes::install_github("yabellini/tutorialgRaficosFN")
+
 
 Si no tenes la ultima versión entonces tenés que instalar el paquete [learnr](https://rstudio.github.io/learnr/index.html) y luego ejecutar de esta manera el Tutorial:
 
@@ -34,7 +38,10 @@ The objectives were:
 * learn how to change the tutorial styles based on [this post](https://education.rstudio.com/blog/2020/05/learnr-for-remote/)
 * to make a contribution to the celebration of Florence Nightingale (since I have not been able to participate in #30diasdegraficos)
 
-To install the package you have to download the .tar.gz or .zip (only for Windows) file and install the `tutorialgRaficosFN` package from the option Tools -> Install Packages -> Install from -> Package Archive File (.zip; .tar.gz). If you have the latest version of RStudio it will appear in your Tutorial panel.
+To install the development version from GitHub use:
+
+# install.packages("remotes")
+remotes::install_github("yabellini/tutorialgRaficosFN")
 
 If you don't have the latest version then you have to install the [learnr package](https://rstudio.github.io/learnr/index.html) and then run the Tutorial like this:
 
