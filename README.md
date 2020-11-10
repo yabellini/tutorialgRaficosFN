@@ -16,8 +16,10 @@ Los objetivos fueron:
 
 Para instalar la versión de desarrollo desde GitHub, usá:
 
+``` r
 # install.packages("remotes")
 remotes::install_github("yabellini/tutorialgRaficosFN")
+```
 
 
 Si no tenes la ultima versión entonces tenés que instalar el paquete [learnr](https://rstudio.github.io/learnr/index.html) y luego ejecutar de esta manera el Tutorial:
@@ -40,8 +42,10 @@ The objectives were:
 
 To install the development version from GitHub use:
 
+``` r
 # install.packages("remotes")
 remotes::install_github("yabellini/tutorialgRaficosFN")
+```
 
 If you don't have the latest version then you have to install the [learnr package](https://rstudio.github.io/learnr/index.html) and then run the Tutorial like this:
 
