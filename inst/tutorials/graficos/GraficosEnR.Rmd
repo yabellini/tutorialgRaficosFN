@@ -2,6 +2,7 @@
 title: "Gráficos con R"
 output:
   learnr::tutorial:
+    language: es
     progressive: true
     allow_skip: true
     css: css/miceeseese.css
@@ -100,7 +101,7 @@ Específicamente, podemos *dividir un gráfico* en los siguientes *tres componen
 
 Vamos a ver un ejemplo de estos componentes en un gráfico, para ello vamos a utilizar el paquete `gapminder` que ya instalamos y cargamos por ti.
 
-Para ver los datos de `gapminder`, escribe `gapminder` en el bloque de código que aparece abajo y luego haz click en el botón _"Run Code"_ (ejecutar código, en inglés).
+Para ver los datos de `gapminder`, escribe `gapminder` en el bloque de código que aparece abajo y luego haz click en el botón _"Ejecutar código"_.
 
 ```{r gapminder0, exercise = TRUE}
 
@@ -113,7 +114,7 @@ gapminder
 
 ### Mensaje
 
-Buen trabajo! Usaremos fragmentos de código interactivos como este en el tutorial. Siempre que encuentres uno, puedes hacer clic en _Run Code_ para ejecutar el código escrito. Si hay un botón _Hint_ o _Solución_, puedes hacer clic para recibir ayuda y/o ver la respuesta.
+Buen trabajo! Usaremos fragmentos de código interactivos como este en el tutorial. Siempre que encuentres uno, puedes hacer clic en _Ejecutar código_ para ejecutar el código escrito. Si hay un botón _Pista_ o _Solución_, puedes hacer clic para recibir ayuda y/o ver la respuesta.
 
 ## A graficar
 
@@ -124,7 +125,7 @@ El siguiente gráfico está realizado con los datos de `gapminder`, intentemos r
 ```{r echo=TRUE}
 
 ggplot(data = gapminder, 
-       mapping = aes(x = gdpPercap, y = lifeExp, color=continent, size=pop))+
+       mapping = aes(x = gdpPercap, y = lifeExp, color = continent, size = pop)) +
     geom_point()
 
 ```
@@ -132,8 +133,8 @@ ggplot(data = gapminder,
 Mirando el código y el gráfico, podemos indentificar que:
 
 * Datos: el *nombre del conjunto de datos* (gapminder) se asigna al atributo `data`
-* Estética: el eje `x` representa la variable `gdpPercap`, el eje `y` representa la variable `lifeExp`, el `color` representa la variable `continent` y el tamaño (`size`) representa la variable población.
-* Geometría: generamos un gráfico de puntos, como indica `geom_point()`
+* Estética: el eje `x` representa la variable `gdpPercap`, el eje `y` representa la variable `lifeExp`, el `color` (o `colour`) representa la variable `continent` y el tamaño (`size`) representa la variable población.
+* Geometría: generamos un gráfico de puntos, como indica la función `geom_point()`
 
 
 ### Cambiemos algunas propiedades
@@ -143,7 +144,7 @@ Supongamos que queremos cambiar los ejes del gráfico, ¿cómo cambiarías el c�
 ```{r grafico_puntos, exercise=TRUE}
 
 ggplot(data = gapminder, 
-       mapping = aes(x = gdpPercap, y = lifeExp, color=continent, size=pop))+
+       mapping = aes(x = gdpPercap, y = lifeExp, color = continent, size = pop))+
     geom_point()
 
 ```
@@ -153,9 +154,10 @@ ggplot(data = gapminder,
 Recuerda que los ejes están representados por las letras x (horizontal) e y (vertical)
 
 ```
+
 ### Mensaje
 
-Bien hecho!, además del gráfico de puntos, indicado en el código anterior por `geom_point`, tenemos otros tipos de gráficos, por ejemplo gráficos de líneas, de barras, de áreas o histogramas.  
+Bien hecho!, además del gráfico de puntos, indicado en el código anterior por `geom_point()`, tenemos otros tipos de gráficos, por ejemplo gráficos de líneas, de barras, de áreas o histogramas.  
 
 
 ```{r quiz}
@@ -176,7 +178,7 @@ quiz(
 
 ### Hagamos un gráfico de lineas
 
-Vamos a realizar otros gráficos utilizando los datos en `gapminder`.  Para utilizar el gráfico de lineas, vamos a ver la evolución de la población de Argentina en la serie de datos disponible.
+Vamos a realizar otros gráficos utilizando los datos en `gapminder`.  Para generar el gráfico de lineas, vamos a ver la evolución de la población de Argentina en la serie de datos disponible.
 
 Ya hemos filtrado los datos necesarios en el dataset `Argentina` y está disponible en el entorno para que lo puedas utilizar. A continuación te mostramos los primeros registros de este dataset. 
 
@@ -190,7 +192,7 @@ Modifica el siguiente código para generar un gráfico que lineas que nos muestr
 ```{r grafico_lineas, exercise=TRUE}
 
 ggplot(data = ________, 
-       mapping = aes(x = _______, y = ________))+
+       mapping = aes(x = _______, y = ________)) +
     geom_line()
 
 
@@ -207,9 +209,8 @@ ggplot(data = ________,
 ```{r grafico_lineas-solution}
 
 ggplot(data = Argentina, 
-       mapping = aes(x = year, y = pop))+
+       mapping = aes(x = year, y = pop)) +
     geom_line()
-
 
 ```
 
@@ -218,18 +219,18 @@ ggplot(data = Argentina,
 Hay dos formas de hacer un gráfico de barras en `ggplot2`, una forma es utilizando `geom_bar()` y otra es utilizando `geom_col()`.
 
 
-* `geom_bar()` : utilizamos esta geometría cuando *no tenemos* una variable que contenga el cálculo de la cantidad de la variable categórica que queremos gráficar.  El cálculo se realizará para generar el gráfico.
+* `geom_bar()` : utilizamos esta geometría cuando *no tenemos* una variable que contenga el cálculo de la cantidad o frecuencia de la variable categórica que queremos gráficar.  El cálculo se realizará para generar el gráfico.
 
-* `geom_col()` : utilizamos esta geometría cuando *tenemos* en nuestro set de datos una variable con el cálculo de la cantidad de la variable categórica que queremos graficar, con la estética *del eje y* asignada a *la variable que tiene esa cantidad*.
+* `geom_col()` : utilizamos esta geometría cuando *tenemos* en nuestro set de datos una variable con el cálculo de la cantidad o frecuencia de la variable categórica que queremos graficar, con la estética *del eje y* asignada a *la variable que tiene esa cantidad*.
 
-Vamos a transformar el gráfico anterior a barras.  ¿cómo realizarias este cambio?, ¿Cuál de las dos opciones de geometrías utilizarías?
+Vamos a transformar el gráfico anterior a barras.  ¿Cómo realizarias este cambio?, ¿cuál de las dos opciones de geometrías utilizarías?
 
 Modifica el siguiente código para generar un gráfico de barras que nos muestre los años en el eje x y la población en el eje y.
 
 ```{r grafico_barras, exercise=TRUE}
 
 ggplot(data = Argentina, 
-       mapping = aes(x = year, y = pop))+
+       mapping = aes(x = year, y = pop)) +
     geom_______()
 
 
@@ -244,7 +245,7 @@ La variable pop ya contiene la cantidad de la población calculada
 ```{r grafico_barras-solution}
 
 ggplot(data = Argentina, 
-       mapping = aes(x = year, y = pop))+
+       mapping = aes(x = year, y = pop)) +
     geom_col()
 
 ```
@@ -262,7 +263,7 @@ Modifica el siguiente código para generar un gráfico de áreas que nos muestre
 ```{r grafico_areas, exercise=TRUE}
 
 ggplot(data = Argentina, 
-       mapping = aes(x = year, y = pop))+
+       mapping = aes(x = year, y = pop)) +
     geom_______()
 
 
@@ -270,14 +271,14 @@ ggplot(data = Argentina,
 
 ```{r grafico_areas-hint}
 
-Recuerda que el nombre de la geometría es la palabra en inglés, en linea es geom_line(), en barras es geom_bar(), para área es geom_ 
+Recuerda que el nombre de la geometría es la palabra en inglés, en linea es geom_line(), en barras es geom_bar(), para área es geom_ ...
 ```
 
 
 ```{r grafico_areas-solution}
 
 ggplot(data = Argentina, 
-       mapping = aes(x = year, y = pop))+
+       mapping = aes(x = year, y = pop)) +
     geom_area()
 
 ```
