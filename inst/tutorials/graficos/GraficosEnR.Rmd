@@ -172,7 +172,7 @@ quiz(
     answer("geom_area(), geom_histogram()", message = "En general a la palabra geom_ se le agrega el nombre de la geometría en Inglés"),
     answer("geom_line(), geom_area()", correct = TRUE)
   ), 
-  caption = "Gemetrías con ggplot2"
+  caption = "Geometrías con ggplot2"
 )
 ```
 
