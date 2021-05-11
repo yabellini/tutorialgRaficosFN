@@ -8,3 +8,8 @@ Description: Tutorial para generar gráficos en R festejando a Florence Nighting
 License: CCBY-4.0
 Encoding: UTF-8
 LazyData: true
+Imports:
+  ggplot2,
+  DiagrammeR,
+  gapminder,
+  dplyr
